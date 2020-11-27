@@ -14,6 +14,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./libs/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
     <title>Caio Benatti | Web Developer</title>
   </head>
   <body>
@@ -47,59 +54,78 @@
             </ul>
           </div>
         </nav>
-        <h2 class="big-text">Tralalala Tralalala</h2>
-        <div className="card">
-          <img src="{project.image}" alt="project" />
+        <h2 class="big-text">Projects</h2>
+        <div class="d-flex flex-row justify-content-center flex-wrap">
+          <div class="card">
+            <img src="./libs/misc/ssgaze.png" alt="project Gazetteer" />
 
-          <h2 className="title">{project.title}</h2>
-          <p className="quote">{project.quote}</p>
-          <div className="links">
-            { project.linkCode &&
-            <a
-              href="{project.linkCode}"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              Code </a
-            >} {project.linkLive &&
-            <a
-              href="{project.linkLive}"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              See it live </a
-            >}
+            <h2 class="title">Gazetteer</h2>
+            <p class="quote">{project.quote}</p>
+            <div class="links">
+              <a
+                href="https://github.com/caiobenatti/gazetteer"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link"
+              >
+                Code <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.caiobenatti.co.uk/gazetteer"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link"
+              >
+                See it live
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="card">
-          <img src="{project.image}" alt="project" />
+          <div class="card">
+            <img src="./libs/misc/sscd.png" alt="project Company Directory" />
 
-          <h2 className="title">{project.title}</h2>
-          <p className="quote">{project.quote}</p>
-          <div className="links">
-            { project.linkCode &&
-            <a
-              href="{project.linkCode}"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              Code </a
-            >} {project.linkLive &&
-            <a
-              href="{project.linkLive}"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              See it live </a
-            >}
+            <h2 class="title">Lorem Company Directory</h2>
+            <p class="quote">{project.quote}</p>
+            <div class="links">
+              { project.linkCode &&
+              <a
+                href="https://github.com/caiobenatti/companyDirectory"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link"
+              >
+                Code </a
+              >} {project.linkLive &&
+              <a
+                href="{project.linkLive}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link"
+              >
+                See it live </a
+              >}
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="inner">
+        <p>Copyright © Caio Benatti</p>
+        <a href="https://github.com/caiobenatti" target="_blank"
+          ><i class="fab fa-github fa-2x"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/caio-benatti-2a22321bb/"
+          target="_blank"
+        >
+          <span class="fab fa-linkedin fa-2x"></span
+        ></a>
+        <a href="mailto:caio.benatti@gmail.com"
+          ><i class="fas fa-envelope fa-2x"></i>
+        </a>
+      </div>
+    </footer>
+
     <div class="intro">
       <div class="intro-text"></div>
     </div>
