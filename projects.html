@@ -34,31 +34,74 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#"
-                  >Home <span class="sr-only">(current)</span></a
-                >
+                <a class="nav-link" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="projects" href="./projects.html"
-                  >Projects</a
+                <a class="nav-link" href="#"
+                  >Projects <span class="sr-only">(current)</span></a
                 >
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
           </div>
         </nav>
-        <h2 class="big-text">Stay Afloat</h2>
+        <h2 class="big-text">Tralalala Tralalala</h2>
+        <div className="card">
+          <img src="{project.image}" alt="project" />
+
+          <h2 className="title">{project.title}</h2>
+          <p className="quote">{project.quote}</p>
+          <div className="links">
+            { project.linkCode &&
+            <a
+              href="{project.linkCode}"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              Code </a
+            >} {project.linkLive &&
+            <a
+              href="{project.linkLive}"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              See it live </a
+            >}
+          </div>
+        </div>
+        <div className="card">
+          <img src="{project.image}" alt="project" />
+
+          <h2 className="title">{project.title}</h2>
+          <p className="quote">{project.quote}</p>
+          <div className="links">
+            { project.linkCode &&
+            <a
+              href="{project.linkCode}"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              Code </a
+            >} {project.linkLive &&
+            <a
+              href="{project.linkLive}"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              See it live </a
+            >}
+          </div>
+        </div>
       </section>
     </main>
     <div class="intro">
-      <div class="intro-text">
-        <h1 class="hide">
-          <span class="text">Welcome</span>
-        </h1>
-      </div>
+      <div class="intro-text"></div>
     </div>
     <div class="slider"></div>
     <script
@@ -77,6 +120,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="./libs/js/script.js"></script>
-    <script src="./libs/js/jquery-3.5.1.js"></script>
   </body>
 </html>
