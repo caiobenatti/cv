@@ -49,21 +49,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav"></div>
             <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./projects.html">Projects</a>
+              </li>
               <li class="nav-item active">
                 <a class="nav-link" href="#"
-                  >Home <span class="sr-only">(current)</span></a
+                  >Contact <span class="sr-only">(current)</span></a
                 >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="projects" href="./projects.html"
-                  >Projects</a
-                >
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="./contact.html">Contact</a>
               </li>
             </ul>
           </div>
@@ -71,79 +67,47 @@
         <div class="img">
           <img src="./libs/misc/hero.jpg" alt="landingImage" id="imgBack" />
         </div>
-        <div class="mainContent">
-          <h2 class="big-text intro-text">Hello!</h2>
-          <h3 class="text">I'm Caio Benatti, a Full-Stack Web Developer.</h3>
-          <p class="text">I'm currently living in London</p>
-          <p class="text">
-            I'm very passionate about Design and Technology, always keeping up
-            with the new trends on the market.
-          </p>
-          <p class="text">The core techonolgies i use everyday:</p>
-          <p class="icons text">
-            <a
-              href="https://developer.mozilla.org/fi/docs/Web/HTML"
-              target="_blank"
-              class="fab fa-html5 fa-2x"
-            >
-            </a>
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-              target="_blank"
-              class="fab fa-css3-alt fa-2x"
-            >
-            </a>
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-              target="_blank"
-              class="fab fa-js fa-2x"
-            >
-            </a>
-            <a
-              href="https://www.mysql.com/"
-              target="_blank"
-              class="fas fa-database fa-2x"
-            >
-            </a>
-            <a
-              href="https://www.php.net/"
-              target="_blank"
-              class="fab fa-php fa-2x"
-            >
-            </a>
-            <a
-              href="https://getbootstrap.com/"
-              target="_blank"
-              class="fab fa-bootstrap fa-2x"
-            >
-            </a>
-            <a
-              href="https://www.github.com"
-              target="_blank"
-              class="fab fa-github fa-2x"
-            >
-            </a>
-            <a
-              href="https://www.python.org/"
-              target="_blank"
-              class="fab fa-python fa-2x"
-            >
-            </a>
-          </p>
-          <p class="text">
-            And im currently learning:<a
-              href="https://reactjs.org/"
-              target="_blank"
-              class="fab fa-react"
-            ></a
-            >React,
-            <a
-              href="https://nodejs.org/en/"
-              target="_blank"
-              class="fab fa-node"
-            ></a
-            >Node.js, TypeScript, MongoDB
-          </p>
+        <h2 class="big-text">Send me a message</h2>
+        <div class="form">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Your name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Name"
+                value=""
+                name="user_name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="name@example.com"
+                value=""
+                name="user_email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Your message</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                value=""
+                name="message"
+              ></textarea>
+              <button
+                type="submit"
+                class="btn btn-dark"
+                id="buttonSend"
+                value="Send"
+              >
+                Send
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
@@ -164,14 +128,11 @@
         </a>
       </div>
     </footer>
+
     <!-- <div class="intro">
-      <div class="intro-text">
-        <h1 class="hide">
-          <span class="text">Welcome</span>
-        </h1>
-      </div>
-    </div> -->
-    <!-- <div class="slider"></div> -->
+      <div class="intro-text"></div>
+    </div>
+    <div class="slider"></div> -->
 
     <div>
       <ul class="transition">
@@ -182,7 +143,6 @@
         <li></li>
       </ul>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
@@ -190,5 +150,14 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="./libs/js/script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_IGrCpGW5NKI2jLobp5mdQ");
+      })();
+    </script>
   </body>
 </html>

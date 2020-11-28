@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./libs/css/style.css" />
     <link
+      rel="shortcut icon"
+      href="./libs/misc/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
       rel="stylesheet"
     />
@@ -20,7 +25,12 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-
+    <script src="./libs/js/jquery-3.5.1.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
     <title>Caio Benatti | Web Developer</title>
   </head>
   <body>
@@ -40,27 +50,36 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="./index.html">Home</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="#"
                   >Projects <span class="sr-only">(current)</span></a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="./contact.html">Contact</a>
               </li>
             </ul>
           </div>
         </nav>
+        <div class="img">
+          <img src="./libs/misc/hero.jpg" alt="landingImage" id="imgBack" />
+        </div>
         <h2 class="big-text">Projects</h2>
         <div class="d-flex flex-row justify-content-center flex-wrap">
           <div class="card">
             <img src="./libs/misc/ssgaze.png" alt="project Gazetteer" />
 
             <h2 class="title">Gazetteer</h2>
-            <p class="quote">{project.quote}</p>
+            <p class="quote">
+              Gazetteer is a Map project that displays the information about the
+              selected country, weather, currency exchange history, borders the
+              country, get photos from the country and pins out the Unesco
+              heritage sites in the country by consulting multiple API's and
+              local files via Ajax request and jQuery with PHP backend.
+            </p>
             <div class="links">
               <a
                 href="https://github.com/caiobenatti/gazetteer"
@@ -76,7 +95,7 @@
                 rel="noopener noreferrer"
                 class="link"
               >
-                See it live
+                See it working
               </a>
             </div>
           </div>
@@ -84,31 +103,36 @@
             <img src="./libs/misc/sscd.png" alt="project Company Directory" />
 
             <h2 class="title">Lorem Company Directory</h2>
-            <p class="quote">{project.quote}</p>
+            <p class="quote">
+              Company Directory is a CRUD app using PHP, Vanilla JS, jQuery and
+              MariaDB. It's displayed as a single-page-app for RH managers to
+              consult, check and modify employees, departments or locations
+              where the company operate via the usage of PHP and SQL to
+              manipulate the data.
+            </p>
             <div class="links">
-              { project.linkCode &&
               <a
                 href="https://github.com/caiobenatti/companyDirectory"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="link"
               >
-                Code </a
-              >} {project.linkLive &&
+                Code <i class="fab fa-github"></i>
+              </a>
               <a
-                href="{project.linkLive}"
+                href="https://www.caiobenatti.co.uk/companydirectory"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="link"
               >
-                See it live </a
-              >}
+                See it working
+              </a>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer bg-light">
       <div class="inner">
         <p>Copyright © Caio Benatti</p>
         <a href="https://github.com/caiobenatti" target="_blank"
@@ -126,25 +150,26 @@
       </div>
     </footer>
 
-    <div class="intro">
+    <!-- <div class="intro">
       <div class="intro-text"></div>
     </div>
-    <div class="slider"></div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
-      crossorigin="anonymous"
-    ></script>
+    <div class="slider"></div> -->
+
+    <div>
+      <ul class="transition">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="./libs/js/script.js"></script>
   </body>
 </html>
