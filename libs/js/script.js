@@ -8,7 +8,7 @@
 // tl.fromTo(".card", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 
 let tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
+$(".sucess").hide();
 tl.to("ul.transition li", {
   duration: 0.5,
   scaleY: 1,
@@ -37,7 +37,10 @@ document
     emailjs.sendForm("service_km1jgrx", "template_xdhf66c", this).then(
       function () {
         console.log("SUCCESS!");
-        $("#buttonSend").html("Sent!");
+        $("#confirm").html("Sent!");
+        $("#contact-form")[0].reset();
+        $("#contact-form").hide();
+        $(".sucess").fadeIn();
       },
       function (error) {
         console.log("FAILED...", error);
