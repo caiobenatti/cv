@@ -8,7 +8,9 @@
 // tl.fromTo(".card", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 
 let tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
 $(".sucess").hide();
+
 tl.to("ul.transition li", {
   duration: 0.5,
   scaleY: 1,
@@ -24,26 +26,32 @@ tl.to("ul.transition li", {
 });
 tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
 tl.fromTo(".big-text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.fromTo(".card", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-tl.fromTo(".form", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+if ($(".card").length) {
+  tl.fromTo(".card", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+}
+if ($(".text").length) {
+  tl.fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+}
+if ($(".form").length) {
+  tl.fromTo(".form", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    // these IDs from the previous steps
-    emailjs.sendForm("service_km1jgrx", "template_xdhf66c", this).then(
-      function () {
-        console.log("SUCCESS!");
-        $("#confirm").html("Sent!");
-        $("#contact-form")[0].reset();
-        $("#contact-form").hide();
-        $(".sucess").fadeIn();
-      },
-      function (error) {
-        console.log("FAILED...", error);
-      }
-    );
-  });
+      // these IDs from the previous steps
+      emailjs.sendForm("service_km1jgrx", "template_xdhf66c", this).then(
+        function () {
+          console.log("SUCCESS!");
+          $("#confirm").html("Sent!");
+          $("#contact-form")[0].reset();
+          $("#contact-form").hide();
+          $(".sucess").fadeIn();
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+    });
+}
